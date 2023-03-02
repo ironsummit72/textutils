@@ -42,7 +42,8 @@ export default function Capatalize(props) {
   if (text.length === 0) {
     numberOfWords = 0;
   } else {
-    numberOfWords = text.split(" ").length;
+    let trim=text.trim();
+    numberOfWords = trim.split(" ").length;
   }
   return (
     <>
