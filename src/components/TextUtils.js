@@ -8,8 +8,7 @@ export default function Capatalize(props) {
 
   const [text, setText] = useState("");
   const handleOnChange = (event) => {
-    document.getElementById('textar').style.backgroundColor='#07224e'
-    document.getElementById('textar').style.color='#ffff'
+   
     setText(event.target.value);
   };
   const handleUpperCase = () => {
