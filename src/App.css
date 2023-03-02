@@ -1,26 +1,26 @@
 .darkpurple {
     --navbcg: #280355;
-    --bcg: #2e0065;
-    --color: #984eff;
+    --bgc: #2e0065;
+    --color: #c74eff;
 
 }
 
 .darkblue {
     --navbcg: #01016a;
-    --bcg: #040477;
-    --color: #4f39f7;
+    --bgc: #040477;
+    --color: #4c7ff6;
 }
 
 .darkgreen {
     --navbcg: #014101;
-    --bcg: #004d00;
+    --bgc: #004d00;
     --color: #00e200;
 }
 
 .darkpink {
     --navbcg: #670051;
-    --bcg: #79005e;
-    --color: #f86cdc;
+    --bgc: #570044;
+    --color: #c1009a;
 }
 
 
