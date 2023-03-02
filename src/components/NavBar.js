@@ -8,13 +8,15 @@ export default function NavBar(props) {
           TextUtils
         </a>
         <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-       <div className="darkmodetoggle">
-       <input type="checkbox"  onChange={props.toggleOnChange}/>
-        <label htmlFor="darkmode" className="darkmode-label text-white" >{props.darkText} DarkMode</label>
-       </div>
-      </li>
-      </ul>
+          <li class="nav-item active">
+            <div className="darkmodetoggle">
+              <input type="checkbox" onChange={props.toggleOnChange} />
+              <label htmlFor="darkmode" className="darkmode-label text-white">
+                {props.darkText} DarkMode
+              </label>
+            </div>
+          </li>
+        </ul>
       </nav>
     </>
   );

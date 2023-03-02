@@ -8,39 +8,35 @@ export default function Capatalize(props) {
 
   const [text, setText] = useState("");
   const handleOnChange = (event) => {
-   
     setText(event.target.value);
   };
   const handleUpperCase = () => {
     let newval = text.toUpperCase();
 
     setText(newval);
+    props.showAlert("Converted to UpperCase ", "success");
   };
   const handleLowerCase = () => {
     let newval = text.toLowerCase();
     setText(newval);
+    props.showAlert("Converted to LowerCase ", "success");
   };
   const handleClearAll = () => {
-   
     setText("");
-    
+    props.showAlert("Cleared all text", "danger");
   };
   const handleCopy = () => {
+    props.showAlert("Copied all text to clipboard", "success");
     navigator.clipboard.writeText(text);
   };
-  const firstCapital=()=>{
-    let everyWord=text.split(" ");
-    for(let i=0;i<everyWord.length;i++)
-    {
-        everyWord[i]=everyWord[i][0].toUpperCase()+everyWord[i].substring(1);
-        
-
-
+  const firstCapital = () => {
+    let everyWord = text.split(" ");
+    for (let i = 0; i < everyWord.length; i++) {
+      everyWord[i] = everyWord[i][0].toUpperCase() + everyWord[i].substring(1);
     }
-    setText(everyWord.join(" "))
-  
-
-  }
+    setText(everyWord.join(" "));
+    props.showAlert("Capitalized", "success");
+  };
 
   numberOfCharacters = text.length;
   if (text.length === 0) {
@@ -73,7 +69,6 @@ export default function Capatalize(props) {
         <button onClick={firstCapital} className="btn btn-success">
           Make First Letter Capital of Every Word
         </button>
-
       </div>
       <div className="container my-3">
         <h1>Your text summaryy</h1>
@@ -84,7 +79,11 @@ export default function Capatalize(props) {
       </div>
       <div className="container my-3">
         <h1>Preview</h1>
-        <p>{text.length===0?"Enter something in the textarea above to preview":text}</p>
+        <p>
+          {text.length === 0
+            ? "Enter something in the textarea above to preview"
+            : text}
+        </p>
       </div>
     </>
   );
