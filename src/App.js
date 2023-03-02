@@ -1,18 +1,23 @@
 import Capatalize from "./components/TextUtils";
 import NavBar from "./components/NavBar";
+import { useState } from "react";
 
 
 
 
 
 function App() {
+const [darkText,setDarkText]=useState('Enable')
   const onChange=(event)=>{
     if(event.target.checked===true)
     {
-      document.body.className='dark-theme'
-      document.getElementById('textar').style.backgroundColor='#07224e'
-      document.getElementById('textar').style.color='#ffffff'
-    }else{
+ setDarkText('Disable')
+ document.body.className='dark-theme'
+ document.getElementById('textar').style.backgroundColor='#07224e'
+ document.getElementById('textar').style.color='#ffffff'
+}else{
+      setDarkText('Enable')
+  
       document.body.className='light-theme'
       document.getElementById('textar').style.backgroundColor='#ffffff'
       document.getElementById('textar').style.color='#000000'
@@ -22,7 +27,7 @@ function App() {
 
   return (
     <>
-      <NavBar toggleOnChange={onChange}/>
+      <NavBar toggleOnChange={onChange} darkText={darkText}/>
 
       <Capatalize />
     </>
