@@ -1,20 +1,53 @@
+.darkpurple {
+    --navbcg: #280355;
+    --bcg: #2e0065;
+    --color: #984eff;
+
+}
+
+.darkblue {
+    --navbcg: #01016a;
+    --bcg: #040477;
+    --color: #4f39f7;
+}
+
+.darkgreen {
+    --navbcg: #014101;
+    --bcg: #004d00;
+    --color: #00e200;
+}
+
+.darkpink {
+    --navbcg: #670051;
+    --bcg: #79005e;
+    --color: #f86cdc;
+}
+
+
 .dark-theme {
-    --bgc: #07224e;
+    --navbcg: #001e64;
+    --bgc: #082e6a;
     --color: white;
+}
+
+
+.light-theme {
+    --navbcg: #2565fa;
+    --bgc: white;
+    --color: black;
 
 
 }
 
-.light-theme {
-    --bgc: white;
-    color: black;
-
+.navbar {
+    background-color: var(--navbcg) !important;
 }
 
 body {
     background-color: var(--bgc);
     color: var(--color);
 }
+
 
 .App {
     text-align: center;
@@ -71,6 +104,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+    top: 10px
 }
 
 .darkmode-label {
@@ -112,4 +147,33 @@ input[type="checkbox"]:before {
 
 input:checked[type="checkbox"]:before {
     left: 20px;
+}
+
+/* color pallets */
+
+.colorpalettes {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    position: relative;
+    width: auto;
+    min-width: 125px;
+    height: 50px;
+    top: 10px;
+    left: 100px
+}
+
+
+.colorbtns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 800;
+    font-size: 0.7rem;
+    width: 25px;
+    height: 25px;
+    background-color: purple;
+    border-radius: 50%;
+    border: 1px solid white;
+    cursor: progress;
 }
