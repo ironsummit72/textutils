@@ -23,6 +23,7 @@ function App() {
       document.getElementById("textar").style.backgroundColor = "#07224e";
       document.getElementById("textar").style.color = "#ffffff";
       showAlert("Darkmode Enabled", "success");
+      document.title='TextUtils-DarkMode'
     } else {
       setDarkText("Enable");
 
@@ -30,6 +31,7 @@ function App() {
       document.getElementById("textar").style.backgroundColor = "#ffffff";
       document.getElementById("textar").style.color = "#000000";
       showAlert("Darkmode Disabled", "success");
+      document.title='TextUtils-LightMode'
     }
   };
 

@@ -3,25 +3,27 @@ import "../App.css";
 export default function NavBar(props) {
   const onDarkPurple=()=>
   {
-    darkColorPalletsProperties('darkpurple',"#2e0065",'#c74eff','DarkMode Enabled (DarkPurple)');
+    darkColorPalletsProperties('darkpurple',"#2e0065",'#c74eff','DarkMode Enabled (DarkPurple)','DarkPurple');
   }
   const onDarkBlue=()=>{
-    darkColorPalletsProperties('darkblue','#040477','#4c7ff6','DarkMode Enabled (DarkBlue)');
+    darkColorPalletsProperties('darkblue','#040477','#4c7ff6','DarkMode Enabled (DarkBlue)','DarkBlue');
   }
   const onDarkGreen=()=>{
-    darkColorPalletsProperties('darkgreen','#004d00','#00e200','DarkMode Enabled (DarkGreen)');
+    darkColorPalletsProperties('darkgreen','#004d00','#00e200','DarkMode Enabled (DarkGreen)',"DarkGreen");
   }
   const onDarkPink=()=>{
-    darkColorPalletsProperties('darkpink','#570044','#c1009a','DarkMode Enabled (DarkPink)');
+    darkColorPalletsProperties('darkpink','#570044','#c1009a','DarkMode Enabled (DarkPink)','DarkPink');
 }
 
-  const darkColorPalletsProperties=(className,bgc,c,message)=>{
+  const darkColorPalletsProperties=(className,bgc,c,message,titletheme)=>{
     document.body.className=className;
     document.getElementById("textar").style.backgroundColor = bgc;
     document.getElementById("textar").style.color = c;
     document.getElementById('darkcheck').checked=true;
     document.getElementById('darklabel').innerText="Disable DarkMode";
+    document.title=`TextUtils-${titletheme}`
     props.showAlert(message,'success');
+
   }
   return (
     <>
