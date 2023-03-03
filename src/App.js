@@ -35,7 +35,7 @@ function App() {
 
   return (
     <>
-      <NavBar toggleOnChange={onChange} darkText={darkText} />
+      <NavBar toggleOnChange={onChange} darkText={darkText} showAlert={showAlert} />
       <Alert message={alert} type={alert} />
 
       <Capatalize showAlert={showAlert} />

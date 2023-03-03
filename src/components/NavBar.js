@@ -3,33 +3,25 @@ import "../App.css";
 export default function NavBar(props) {
   const onDarkPurple=()=>
   {
-    document.body.className='darkpurple'
-    textAreaColor("#2e0065",'#c74eff')
-    document.getElementById('darkcheck').checked=true;
-    document.getElementById('darklabel').innerText="Disable DarkMode"
+    darkColorPalletsProperties('darkpurple',"#2e0065",'#c74eff','DarkMode Enabled (DarkPurple)');
   }
   const onDarkBlue=()=>{
-    
-    document.body.className='darkblue'
-    textAreaColor('#040477','#4c7ff6')
+    darkColorPalletsProperties('darkblue','#040477','#4c7ff6','DarkMode Enabled (DarkBlue)');
   }
   const onDarkGreen=()=>{
-    document.body.className='darkgreen'
-    textAreaColor('#004d00','#00e200')
-    
+    darkColorPalletsProperties('darkgreen','#004d00','#00e200','DarkMode Enabled (DarkGreen)');
   }
   const onDarkPink=()=>{
-    document.body.className='darkpink'
-    textAreaColor('#570044','#c1009a')
-    
+    darkColorPalletsProperties('darkpink','#570044','#c1009a','DarkMode Enabled (DarkPink)');
+}
 
-  }
-
-  const textAreaColor=(bgc,c)=>{
+  const darkColorPalletsProperties=(className,bgc,c,message)=>{
+    document.body.className=className;
     document.getElementById("textar").style.backgroundColor = bgc;
     document.getElementById("textar").style.color = c;
     document.getElementById('darkcheck').checked=true;
-    document.getElementById('darklabel').innerText="Disable DarkMode"
+    document.getElementById('darklabel').innerText="Disable DarkMode";
+    props.showAlert(message,'success');
   }
   return (
     <>
