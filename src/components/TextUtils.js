@@ -43,7 +43,10 @@ export default function Capatalize(props) {
     numberOfWords = 0;
   } else {
     let trim=text.trim();
-    numberOfWords = trim.split(" ").length;
+    numberOfWords = trim.split(" ").filter((elem)=>{
+      return elem.length!=0
+
+    }).length;
   }
   return (
     <>
